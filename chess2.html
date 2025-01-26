@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chess.css">
+    <link rel="icon" href="images2/logo.ico" type="image/svg+xml">
+    <script src ="chess.js" async></script>
+
+    <title>My Chess</title>
+    <style>
+        /* General Styles */
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #cfcfcf;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .sidebar {
+            background: #7a7a7a;
+            color: #a7c9f8;
+            padding: 30px;
+            border-radius: 3px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #a3dcff;
+            padding-bottom: 5px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin: 10px 0;
+        }
+
+        .sidebar a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .sidebar a:hover {
+            color: #9ad1f4;
+        }
+
+        .main-area {
+            background: #a2a2a2;
+            color: #ffffff;
+            padding: 1px 20px;
+            border-radius: 3px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .chess_name{
+          height:5px;
+          font-weight: 600;
+          margin:10px 0px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="sidebar">
+                <img src="images2/logo.ico" alt="" width="80px">
+                <h2>MyChess</h2>
+                <ul>
+                    <li><a href="#">Pass & Play</a></li>
+                    <li><a href="#">Play Online</a></li>
+                    <li><a href="#">Play Bots</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+                <button class = "button-18" onclick="startGame()">START GAME</button>
+                <br> <br> <br>
+                <select id="options" onchange="createBoard()">
+                  <option value="neo"> Neo </option>
+                  <option value="wood"> Wood </option>
+                  <option value="glass"> Glass </option>
+                  <option value="classic"> Classic </option>
+                  <option value="bases"> Bases </option>
+                  <option value="neo_wood"> Neo-Wood </option>
+                  <option value="game_room"> Game Room </option>
+                  <option value="alpha"> Alpha </option>
+                  <option value="marble"> Marble </option>
+                  <option value="blindfold"> Blindfold </option>
+                </select>
+            </div>
+
+            <div class="main-area">
+
+                <div style="display:flex; flex-direction: row;padding:none;">
+                  <div id="player1" class="timer">10:00</div>
+                  
+                  <div class="captured" style="display: flex;flex-direction: column;">
+                      <p class="chess_name">Abhinaba2002 (486) 🎸</p>
+                      <div class="white" id="captured-white"></div>        
+                  </div>  
+                  
+              </div>
+                 
+              <div class="board" id="board"></div>
+              
+              <div style="display:flex; flex-direction: row;padding:none;">
+                  <div id="player2" class="timer">10:00</div>
+                  
+                  <div class="captured" style="display: flex;flex-direction: column;">
+                    <p class="chess_name">Player_2341 (203) 🏀</p>
+                    <div class="black" id="captured-black"></div>
+                  </div>
+                  
+              </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

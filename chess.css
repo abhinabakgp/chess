@@ -1,0 +1,146 @@
+
+.timer {
+  padding: 5px;
+  margin: 10px 1px;
+  margin-right: 10px;
+  font-size: 1.7rem;
+  border: 1px solid rgb(98, 98, 98);
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.captured {
+    display: flex;
+    height: 60px;
+
+
+}
+.captured img{
+    width: 25px;
+    margin-left: -8px;
+    padding-top: 9px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 72px);
+    grid-template-rows: repeat(8, 72px);
+    border: 1px solid #333;
+    pointer-events:none;
+}
+.square {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.square.black {
+    background-color:#769656;
+}
+.square.white {
+    background-color: #EEEED2;
+}
+.square img {
+    width: 68px;
+    height: 68px; 
+    /* pointer-events: none; */
+}
+.highlight {
+    border: 36px solid rgb(226, 243, 112);
+    width: 0px; 
+    height: 0px;
+}
+
+
+.square.last-move-from {
+  border: 36px solid rgb(173, 199, 0);
+  width: 0px; 
+  height: 0px;
+}
+
+.square.last-move-to {
+  border: 36px solid rgb(208, 230, 67);
+  width: 0px; 
+  height: 0px;
+}
+
+.possible-move {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.capturable {
+    border: 36px solid rgb(203, 226, 255);
+    width: 0px;
+    height: 0px;
+}
+
+.king-check {
+  border: 36px solid rgb(255, 74, 47);
+  width: 0px;
+  height: 0px;
+}
+
+
+/* CSS */
+.button-18 {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.button-18:hover,
+.button-18:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.button-18:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.button-18:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
