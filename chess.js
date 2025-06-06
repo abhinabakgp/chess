@@ -33,6 +33,31 @@ let castlingRights = {
 };
 let enPassantTarget = null;
 
+// ,,,,,,,,,,,,,...................................................................................
+
+
+const themeSelector = document.getElementById('theme-selector');
+
+themeSelector.addEventListener('change', () => {
+  // Remove existing theme classes
+  document.body.classList.remove(
+    ...Array.from(document.body.classList).filter((cls) => cls.startsWith('theme'))
+  );
+
+  // Add the selected theme class
+  const selectedTheme = themeSelector.value;
+  document.body.classList.add(selectedTheme);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize the default theme
+    document.body.classList.add('theme3');
+  });
+
+
+
+//.....................................................................................
+
 function startGame() {
     switchTimer();
     document.getElementById('board').style.pointerEvents = 'all';
