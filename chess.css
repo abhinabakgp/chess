@@ -6,13 +6,37 @@
   font-size: 1.7rem;
   border: 1px solid rgb(161, 161, 161);
   border-radius: 4px;
-  background-color: #2e2e2e;
+  background-color: #eeeeee;
 }
 
 
 body {
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
+
+
+.main-content {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        gap: 5px;
+        
+    }
+
+.sidebar {
+        padding:30px;
+    }
+
+
+.chess_name{
+      height:5px;
+      font-weight: 500;
+      margin:10px 0px;
+    }
+
 
 .captured {
     display: flex;
@@ -44,33 +68,13 @@ body {
     /* border: 0.01px solid rgb(198, 198, 198); */
 }
 
-.square.black {
-    background-color:#ac7e58
-}
-.square.white {
-    background-color: 	#f8e3c0;
-}
+
 
 .square img {
     width: 74px;
     height: 74px; 
-    /* opacity:900% !important; */
-    /* position: relative; */
-    /* image-resolution: 100dpi;
-    image-orientation: flip; */
 
 }
-
-
-.square img:active {
-      animation: bounce 0.1s !important;
-    }
-
-    @keyframes bounce {
-      0%   { transform: translateY(0); }
-      50%  { transform: translateY(-5px); }
-      100% { transform: translateY(0); }
-    }
 
 .highlight {
     background-color: rgb(172, 254, 127) !important;
@@ -135,13 +139,11 @@ body {
 }
 
 
-/* Theme3: Wood */
-.theme3 .square.white {
-  background-color: #ffdf5eda;
-  /* transition: 1s ease-in; */
-}
 .theme3 .square.black {
-  background-color: #975729;
+    background-color:#ac7e58;
+}
+.theme3 .square.white {
+    background-color: 	#f8e3c0;
 }
 
 .theme3 .highlight{
@@ -252,12 +254,6 @@ body {
 
 
 
-
-
-
-
-
-
 @media (max-width: 768px) {
   html, body {
     margin: 0;
@@ -310,11 +306,11 @@ body {
     height: 12.5vw;
   }
 
-  .timer {
+  /* .timer {
     font-size: 1.3rem;
     margin: 5px auto;
     text-align: center;
-  }
+  } */
 
   .captured {
     justify-content: center;
